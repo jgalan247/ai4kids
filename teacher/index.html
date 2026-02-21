@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Notes | Teachable Machine</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="sidebar-overlay" aria-hidden="true"></div>
+<nav class="sidebar" aria-label="Main navigation">
+  <div class="sidebar-brand">
+    <a href="../index.html" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M10 16l4 4 8-8"/></svg>
+      <div><div class="logo-text">Teachable Machine</div><div class="logo-sub">Primary School</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <ul>
+      <li class="nav-section-title">Home</li>
+      <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg> Unit Overview</a></li>
+      <li class="nav-section-title">Lessons</li>
+      <li><a href="../lessons/lesson-1.html" data-lesson="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 1 – Your First Model</a></li>
+      <li><a href="../lessons/lesson-2.html" data-lesson="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 2 – Bias &amp; Fairness</a></li>
+      <li><a href="../lessons/lesson-3.html" data-lesson="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 3 – Train vs Test</a></li>
+      <li><a href="../lessons/lesson-4.html" data-lesson="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 4 – Three Classes</a></li>
+      <li><a href="../lessons/lesson-5.html" data-lesson="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 5 – Product Design</a></li>
+      <li><a href="../lessons/lesson-6.html" data-lesson="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 6 – Showcase</a></li>
+      <li class="nav-section-title">Support</li>
+      <li><a href="../resources/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Resources</a></li>
+      <li><a href="../help/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 015.12 1.5c0 1.5-2.12 2-2.12 3.5"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg> Help Sheet</a></li>
+      <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/></svg> Teacher Notes</a></li>
+      <li><a href="../glossary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Glossary</a></li>
+      <li><a href="../about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg> About</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">&copy; 2026 &middot; Primary School &middot; Think Big, Start Small!</div>
+</nav>
+
+<header class="site-header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <h1>Teachable Machine</h1><span class="badge">Primary School</span>
+  </div>
+  <div class="header-right">
+    <div class="mode-toggle">
+      <label for="mode-checkbox">Student</label>
+      <div class="toggle-switch"><input type="checkbox" id="mode-checkbox" aria-label="Toggle teacher mode"><span class="slider"></span></div>
+      <label for="mode-checkbox">Teacher</label>
+    </div>
+    <div class="progress-bar-mini" title="Lesson progress"><div class="fill" style="width:0%"></div></div>
+    <span class="progress-text" style="font-size:0.8rem;font-weight:600;color:#64748b;">0/6</span>
+  </div>
+</header>
+
+<main class="main-content" id="main">
+
+  <h1>Teacher Notes</h1>
+  <p>This page contains detailed guidance for delivering the Teachable Machine unit. Toggle <strong>"Teacher mode"</strong> in the header to also reveal inline teacher notes on every lesson page.</p>
+
+  <!-- Unit Overview -->
+  <div class="card">
+    <h2 style="margin-top:0;">Unit Overview</h2>
+    <table class="results-table">
+      <thead>
+        <tr><th>Lesson</th><th>Title</th><th>Key Focus</th><th>Time</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Your First Model</td><td>2-class model (circle vs triangle), intro to ML</td><td>45–60 min</td></tr>
+        <tr><td>2</td><td>Bias &amp; Fairness</td><td>Background trick, biased vs balanced datasets</td><td>45–60 min</td></tr>
+        <tr><td>3</td><td>Training vs Testing</td><td>TRAIN/TEST split, accuracy calculation</td><td>45–60 min</td></tr>
+        <tr><td>4</td><td>Three-Class Model</td><td>Multi-class, confusion, model improvement</td><td>45–60 min</td></tr>
+        <tr><td>5</td><td>Product Design</td><td>Own product idea, prototype, evaluation</td><td>45–60 min</td></tr>
+        <tr><td>6</td><td>Showcase &amp; Reflection</td><td>Presentation, AI Mythbusters, ethics</td><td>45–60 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Timings -->
+  <h2>Suggested Timings</h2>
+  <div class="card">
+    <h3 style="margin-top:0;">Standard Lesson Structure (60 minutes)</h3>
+    <table class="results-table">
+      <thead>
+        <tr><th>Phase</th><th>Time</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Starter</td><td>5 min</td><td>Use starter slides from the deck. Quick discussion or think-pair-share.</td></tr>
+        <tr><td>Teacher intro / demo</td><td>5–10 min</td><td>Brief demo on the board. Show the key steps for that lesson.</td></tr>
+        <tr><td>Main tasks</td><td>30–35 min</td><td>Students work through the step-by-step instructions. Circulate and support.</td></tr>
+        <tr><td>Plenary / Exit ticket</td><td>5–10 min</td><td>Students complete the exit ticket. Quick review of key learning.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Condensed Lesson (45 minutes)</h3>
+    <p>If you only have 45 minutes, reduce the main task time to 20–25 minutes. Consider setting the challenge task as homework. Skip the teacher demo if students are comfortable with Teachable Machine by Lesson 3+.</p>
+  </div>
+
+  <!-- Differentiation -->
+  <h2>Differentiation</h2>
+  <div class="card">
+    <h3 style="margin-top:0;">Supporting Lower-Ability Students</h3>
+    <ul>
+      <li><strong>Pre-made dataset:</strong> Provide the demo dataset ZIP so students don't have to draw all images from scratch.</li>
+      <li><strong>Paired work:</strong> Partner a struggling student with a more confident peer.</li>
+      <li><strong>Reduced expectations:</strong> Accept 5–8 images per class instead of 10. Focus on the process, not the accuracy score.</li>
+      <li><strong>Printed help sheet:</strong> Give the help sheet as a laminated handout for students to refer to.</li>
+      <li><strong>1:1 demo:</strong> Show the first few steps on their screen before they continue independently.</li>
+      <li><strong>Sentence starters:</strong> For exit tickets, provide sentence starters on the board (e.g. "Machine learning is when...").</li>
+    </ul>
+
+    <h3>Challenging Higher-Ability Students</h3>
+    <ul>
+      <li><strong>More classes:</strong> Ask them to build 4- or 5-class models.</li>
+      <li><strong>Tricky test data:</strong> Draw ambiguous or deliberately confusing images to test model limits.</li>
+      <li><strong>Research:</strong> Ask them to research a real-world example of AI bias and write a paragraph about it.</li>
+      <li><strong>Accuracy analysis:</strong> Have them create a proper confusion matrix (which classes get confused with which).</li>
+      <li><strong>Peer teaching:</strong> Ask confident students to help others and explain concepts.</li>
+    </ul>
+  </div>
+
+  <!-- Common Issues -->
+  <h2>Common Issues &amp; Quick Fixes</h2>
+  <div class="card">
+    <table class="results-table">
+      <thead>
+        <tr><th>Issue</th><th>Cause</th><th>Fix</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Teachable Machine won't load</td>
+          <td>Browser or network issue</td>
+          <td>Use Chrome or Edge. Clear browser cache. Check the school firewall isn't blocking the site.</td>
+        </tr>
+        <tr>
+          <td>Training freezes</td>
+          <td>Student switched tabs</td>
+          <td>Explain they must keep the tab active. If frozen, refresh and re-upload.</td>
+        </tr>
+        <tr>
+          <td>All predictions wrong</td>
+          <td>Images in wrong classes</td>
+          <td>Check the upload — students may have put circles in the triangle class by mistake.</td>
+        </tr>
+        <tr>
+          <td>Very low accuracy</td>
+          <td>Too few images / too similar</td>
+          <td>Add more images with more variety. Minimum 8 per class, aim for 10–15.</td>
+        </tr>
+        <tr>
+          <td>Students can't save images properly</td>
+          <td>Using wrong file format or location</td>
+          <td>Demo how to use File &gt; Save As &gt; PNG. Show them the correct folder path.</td>
+        </tr>
+        <tr>
+          <td>Paint canvas too large/small</td>
+          <td>Default canvas size varies</td>
+          <td>Resize canvas: File &gt; Properties &gt; set to 400x400 pixels.</td>
+        </tr>
+        <tr>
+          <td>Student lost their work on the website</td>
+          <td>Different computer or cleared localStorage</td>
+          <td>Data is stored in the browser's localStorage. If they switch computers, data won't transfer. Remind them to use the same machine.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pre-lesson Checklist -->
+  <h2>Pre-Lesson Checklist</h2>
+  <div class="box box-green">
+    <h4>Before Each Lesson, Check:</h4>
+    <ul>
+      <li>Teachable Machine website loads on student machines (test beforehand)</li>
+      <li>Microsoft Paint is installed and accessible</li>
+      <li>Students can create and save files to the desktop</li>
+      <li>Demo dataset ZIP is available (shared drive or pre-downloaded)</li>
+      <li>Starter slides are ready to display</li>
+      <li>This website is accessible (locally or on the school network)</li>
+    </ul>
+  </div>
+
+  <!-- Assessment -->
+  <h2>Assessment Opportunities</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Exit tickets (every lesson):</strong> Check understanding of key vocabulary and concepts. Answers are saved to localStorage — you can view them on individual machines or ask students to read them out.</li>
+      <li><strong>Results tables:</strong> Look at accuracy scores and whether students can explain why results are good or bad.</li>
+      <li><strong>Lesson 5 product design:</strong> Assess the design sheet, model accuracy, and evaluation quality. This is the main formative assessment piece.</li>
+      <li><strong>Lesson 6 showcase:</strong> Assess communication skills, depth of reflection, and understanding of AI ethics.</li>
+      <li><strong>Challenge tasks:</strong> Use these to identify students working above expected level.</li>
+    </ul>
+  </div>
+
+  <!-- Curriculum Links -->
+  <h2>Curriculum Links</h2>
+  <div class="card">
+    <p>This unit supports the following areas of the KS3 Computing curriculum:</p>
+    <ul>
+      <li><strong>Understand several key algorithms:</strong> Students explore how classification algorithms learn from data.</li>
+      <li><strong>Understand simple Boolean logic:</strong> Prediction is essentially a classification decision (is it A or B?).</li>
+      <li><strong>Use technology safely, respectfully, and responsibly:</strong> Covered through the bias, fairness, and ethics activities.</li>
+      <li><strong>Be able to evaluate the effectiveness of computational solutions:</strong> Students evaluate their models' accuracy and suggest improvements.</li>
+    </ul>
+  </div>
+
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>

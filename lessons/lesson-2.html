@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 – Bias &amp; Fairness | Teachable Machine</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="sidebar-overlay" aria-hidden="true"></div>
+<nav class="sidebar" aria-label="Main navigation">
+  <div class="sidebar-brand">
+    <a href="../index.html" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M10 16l4 4 8-8"/></svg>
+      <div><div class="logo-text">Teachable Machine</div><div class="logo-sub">Primary School</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <ul>
+      <li class="nav-section-title">Home</li>
+      <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg> Unit Overview</a></li>
+      <li class="nav-section-title">Lessons</li>
+      <li><a href="lesson-1.html" data-lesson="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 1 – Your First Model</a></li>
+      <li><a href="lesson-2.html" data-lesson="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 2 – Bias &amp; Fairness</a></li>
+      <li><a href="lesson-3.html" data-lesson="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 3 – Train vs Test</a></li>
+      <li><a href="lesson-4.html" data-lesson="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 4 – Three Classes</a></li>
+      <li><a href="lesson-5.html" data-lesson="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 5 – Product Design</a></li>
+      <li><a href="lesson-6.html" data-lesson="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 6 – Showcase</a></li>
+      <li class="nav-section-title">Support</li>
+      <li><a href="../resources/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Resources</a></li>
+      <li><a href="../help/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 015.12 1.5c0 1.5-2.12 2-2.12 3.5"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg> Help Sheet</a></li>
+      <li><a href="../teacher/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/></svg> Teacher Notes</a></li>
+      <li><a href="../glossary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Glossary</a></li>
+      <li><a href="../about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg> About</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">&copy; 2026 &middot; Primary School &middot; Think Big, Start Small!</div>
+</nav>
+
+<header class="site-header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <h1>Teachable Machine</h1><span class="badge">Primary School</span>
+  </div>
+  <div class="header-right">
+    <div class="mode-toggle">
+      <label for="mode-checkbox">Student</label>
+      <div class="toggle-switch"><input type="checkbox" id="mode-checkbox" aria-label="Toggle teacher mode"><span class="slider"></span></div>
+      <label for="mode-checkbox">Teacher</label>
+    </div>
+    <div class="progress-bar-mini" title="Lesson progress"><div class="fill" style="width:0%"></div></div>
+    <span class="progress-text" style="font-size:0.8rem;font-weight:600;color:#64748b;">0/6</span>
+  </div>
+</header>
+
+<main class="main-content" id="main">
+
+  <div class="lesson-banner">
+    <h1>Lesson 2: Bias &amp; Fairness</h1>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 45–60 minutes</span>
+      <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Windows PC, Browser, Paint</span>
+    </div>
+    <h3 style="color:#fff;margin-top:0.5rem;">Today you will&hellip;</h3>
+    <ul class="outcomes">
+      <li>Understand what bias means in machine learning</li>
+      <li>Create a biased dataset using the "background trick" and see how it fools the model</li>
+      <li>Fix the bias by creating a fair, balanced dataset</li>
+    </ul>
+  </div>
+
+  <div class="box box-blue">
+    <h4>Equipment Needed</h4>
+    <ul>
+      <li>Windows PC with Chrome or Edge browser</li>
+      <li>Microsoft Paint</li>
+      <li>A folder on the desktop called <strong>TM_Lesson2</strong></li>
+    </ul>
+  </div>
+
+  <h2>Key Vocabulary</h2>
+  <div class="vocab-list">
+    <div class="vocab-item"><strong>Bias</strong><span>When a model learns the wrong pattern from its training data, making unfair or incorrect predictions.</span></div>
+    <div class="vocab-item"><strong>Balanced Dataset</strong><span>A dataset where each class has a similar number of examples and fair representation.</span></div>
+    <div class="vocab-item"><strong>Background Trick</strong><span>When the model learns to recognise the background colour instead of the actual shape.</span></div>
+    <div class="vocab-item"><strong>Fairness</strong><span>Making sure an AI system treats all groups and inputs equally.</span></div>
+  </div>
+
+  <!-- Starter -->
+  <div class="box box-yellow">
+    <h4>Starter Activity (5 minutes)</h4>
+    <p><strong>Imagine this:</strong> A school uses AI to pick students for the football team. The AI was only trained on photos of boys. What might go wrong?</p>
+    <div class="form-group">
+      <label for="starter-1">Your answer:</label>
+      <textarea id="starter-1" data-save="L2_starter1" placeholder="Write what you think would happen..."></textarea>
+    </div>
+    <div class="teacher-only">
+      <p><strong>Key point:</strong> The AI would be biased — it might never pick girls, not because they can't play, but because it was never shown examples of girls playing. This is what bias means in AI.</p>
+    </div>
+  </div>
+
+  <h2>Main Tasks</h2>
+
+  <h3>Part A: Create a Biased Dataset (The Background Trick)</h3>
+  <p>You are going to <strong>deliberately</strong> create a biased model to see what goes wrong.</p>
+  <ol class="steps">
+    <li>
+      <strong>Create a folder</strong> called <code>TM_Lesson2</code> on your desktop. Inside, create two folders: <code>Circles_Biased</code> and <code>Triangles_Biased</code>.
+    </li>
+    <li>
+      <strong>Open Paint.</strong> Draw 10 circles on a <strong>YELLOW background</strong>. To set a yellow background: use the fill bucket tool to fill the canvas with yellow before drawing your circle. Save them in <code>Circles_Biased</code>.
+    </li>
+    <li>
+      Draw 10 triangles on a <strong>BLUE background</strong>. Save them in <code>Triangles_Biased</code>.
+    </li>
+    <li>
+      <strong>Go to Teachable Machine</strong> and create a new Image Project. Upload your yellow-background circles as Class 1 (Circle) and blue-background triangles as Class 2 (Triangle).
+    </li>
+    <li>
+      <strong>Train the model.</strong> Now test it with a <strong>circle on a BLUE background</strong>. What does the model predict?
+    </li>
+  </ol>
+
+  <div class="form-group">
+    <label for="bias-result">What did the model predict for a circle on a blue background?</label>
+    <input type="text" id="bias-result" data-save="L2_biasResult" placeholder="e.g. Triangle">
+  </div>
+  <div class="form-group">
+    <label for="bias-why">Why do you think it got it wrong?</label>
+    <textarea id="bias-why" data-save="L2_biasWhy" placeholder="Explain what happened..."></textarea>
+  </div>
+
+  <div class="teacher-only">
+    <p><strong>Expected result:</strong> The model predicts "Triangle" because it learned to associate BLUE = Triangle and YELLOW = Circle. It learned the background colour, not the shape. This is the "background trick" bias.</p>
+  </div>
+
+  <h3>Part B: Fix the Bias — Create a Fair Dataset</h3>
+  <ol class="steps">
+    <li>
+      Create two new folders: <code>Circles_Fair</code> and <code>Triangles_Fair</code>.
+    </li>
+    <li>
+      Draw 10 circles — this time on a <strong>WHITE background</strong>. Vary the size and position. Save them in <code>Circles_Fair</code>.
+    </li>
+    <li>
+      Draw 10 triangles — also on a <strong>WHITE background</strong>. Save them in <code>Triangles_Fair</code>.
+    </li>
+    <li>
+      <strong>Create a new project</strong> in Teachable Machine. Upload your fair images and train the model.
+    </li>
+    <li>
+      Test it again with a circle on a white background. Does it work better now?
+    </li>
+  </ol>
+
+  <h3>Part C: Compare Your Results</h3>
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th>Test Image</th>
+        <th>Biased Model Prediction</th>
+        <th>Biased Model Confidence</th>
+        <th>Fair Model Prediction</th>
+        <th>Fair Model Confidence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Circle (white background)</td>
+        <td><input type="text" data-save="L2_biased_pred1" placeholder="Circle / Triangle"></td>
+        <td><input type="text" data-save="L2_biased_conf1" placeholder="e.g. 80%"></td>
+        <td><input type="text" data-save="L2_fair_pred1" placeholder="Circle / Triangle"></td>
+        <td><input type="text" data-save="L2_fair_conf1" placeholder="e.g. 95%"></td>
+      </tr>
+      <tr>
+        <td>Triangle (white background)</td>
+        <td><input type="text" data-save="L2_biased_pred2" placeholder="Circle / Triangle"></td>
+        <td><input type="text" data-save="L2_biased_conf2" placeholder="e.g. 55%"></td>
+        <td><input type="text" data-save="L2_fair_pred2" placeholder="Circle / Triangle"></td>
+        <td><input type="text" data-save="L2_fair_conf2" placeholder="e.g. 92%"></td>
+      </tr>
+      <tr>
+        <td>Circle (blue background)</td>
+        <td><input type="text" data-save="L2_biased_pred3" placeholder="Circle / Triangle"></td>
+        <td><input type="text" data-save="L2_biased_conf3" placeholder="e.g. 90%"></td>
+        <td><input type="text" data-save="L2_fair_pred3" placeholder="Circle / Triangle"></td>
+        <td><input type="text" data-save="L2_fair_conf3" placeholder="e.g. 88%"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box box-red">
+    <h4>Common Mistakes &amp; Quick Fixes</h4>
+    <ul>
+      <li><strong>Biased model seems to work fine:</strong> Make sure you're testing with a shape on the WRONG background (e.g. circle on blue). That's where the bias shows up.</li>
+      <li><strong>Fair model still struggles:</strong> Add more images with greater variety. Make sure all images have the same white background.</li>
+      <li><strong>Forgot to start a new project:</strong> You must create a NEW Teachable Machine project for the fair dataset — don't add to the old one.</li>
+    </ul>
+  </div>
+
+  <div class="box box-purple">
+    <h4>Challenge / Stretch Task</h4>
+    <p>Can you think of a real-world example where AI bias could cause a serious problem? Write about it below.</p>
+    <div class="form-group">
+      <label for="challenge-2">Real-world AI bias example:</label>
+      <textarea id="challenge-2" data-save="L2_challenge" placeholder="Think about hiring, policing, medicine, social media..."></textarea>
+    </div>
+  </div>
+
+  <div class="exit-ticket">
+    <h3>Exit Ticket</h3>
+    <div class="form-group">
+      <label for="exit-1">1. What is bias in machine learning?</label>
+      <input type="text" id="exit-1" data-save="L2_exit1" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit-2">2. What was the "background trick" and why did it fool the model?</label>
+      <input type="text" id="exit-2" data-save="L2_exit2" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit-3">3. How did you fix the bias?</label>
+      <input type="text" id="exit-3" data-save="L2_exit3" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit-4">4. Why is fairness important in AI?</label>
+      <input type="text" id="exit-4" data-save="L2_exit4" placeholder="Your answer...">
+    </div>
+    <div class="teacher-only">
+      <p><strong>Expected answers:</strong></p>
+      <ol>
+        <li>Bias is when a model learns the wrong pattern, making unfair or incorrect predictions.</li>
+        <li>All circles had a yellow background and all triangles had a blue background, so the model learned background colour instead of shape.</li>
+        <li>By using the same white background for both classes, so the model had to learn the shape itself.</li>
+        <li>If AI is biased, it could discriminate against people unfairly (e.g. in hiring, healthcare, policing).</li>
+      </ol>
+    </div>
+  </div>
+
+  <h2>Lesson Downloads</h2>
+  <div class="download-grid">
+    <div class="download-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <h3>Demo Datasets</h3>
+      <p>Biased &amp; balanced example images</p>
+      <a href="../assets/datasets/TeachableMachine_Demo_Datasets.zip" class="btn btn-primary btn-small" download>Download ZIP</a>
+    </div>
+    <div class="download-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <h3>Help Sheet</h3>
+      <p>Step-by-step guide</p>
+      <a href="../assets/resources/Teachable_Machine_Student_Help_Sheet.docx" class="btn btn-outline btn-small" download>Download DOCX</a>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:2rem;">
+    <button class="btn btn-done" data-lesson="2">☐ Mark Lesson as Done</button>
+    <button class="btn btn-danger btn-small btn-reset-lesson" data-lesson="2">Reset This Lesson</button>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="lesson-1.html" class="btn btn-outline">&larr; Lesson 1</a>
+    <a href="lesson-3.html" class="btn btn-primary">Lesson 3 &rarr;</a>
+  </div>
+
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>

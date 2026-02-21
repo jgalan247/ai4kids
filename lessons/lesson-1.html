@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 – Your First Model | Teachable Machine</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="sidebar-overlay" aria-hidden="true"></div>
+<nav class="sidebar" aria-label="Main navigation">
+  <div class="sidebar-brand">
+    <a href="../index.html" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M10 16l4 4 8-8"/></svg>
+      <div><div class="logo-text">Teachable Machine</div><div class="logo-sub">Primary School</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <ul>
+      <li class="nav-section-title">Home</li>
+      <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg> Unit Overview</a></li>
+      <li class="nav-section-title">Lessons</li>
+      <li><a href="lesson-1.html" data-lesson="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 1 – Your First Model</a></li>
+      <li><a href="lesson-2.html" data-lesson="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 2 – Bias &amp; Fairness</a></li>
+      <li><a href="lesson-3.html" data-lesson="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 3 – Train vs Test</a></li>
+      <li><a href="lesson-4.html" data-lesson="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 4 – Three Classes</a></li>
+      <li><a href="lesson-5.html" data-lesson="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 5 – Product Design</a></li>
+      <li><a href="lesson-6.html" data-lesson="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 6 – Showcase</a></li>
+      <li class="nav-section-title">Support</li>
+      <li><a href="../resources/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Resources</a></li>
+      <li><a href="../help/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 015.12 1.5c0 1.5-2.12 2-2.12 3.5"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg> Help Sheet</a></li>
+      <li><a href="../teacher/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/></svg> Teacher Notes</a></li>
+      <li><a href="../glossary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Glossary</a></li>
+      <li><a href="../about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg> About</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">&copy; 2026 &middot; Primary School &middot; Think Big, Start Small!</div>
+</nav>
+
+<header class="site-header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <h1>Teachable Machine</h1>
+    <span class="badge">Primary School</span>
+  </div>
+  <div class="header-right">
+    <div class="mode-toggle">
+      <label for="mode-checkbox">Student</label>
+      <div class="toggle-switch"><input type="checkbox" id="mode-checkbox" aria-label="Toggle teacher mode"><span class="slider"></span></div>
+      <label for="mode-checkbox">Teacher</label>
+    </div>
+    <div class="progress-bar-mini" title="Lesson progress"><div class="fill" style="width:0%"></div></div>
+    <span class="progress-text" style="font-size:0.8rem;font-weight:600;color:#64748b;">0/6</span>
+  </div>
+</header>
+
+<main class="main-content" id="main">
+
+  <!-- Lesson Banner -->
+  <div class="lesson-banner">
+    <h1>Lesson 1: Your First Model</h1>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 45–60 minutes</span>
+      <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Windows PC, Browser, Paint</span>
+    </div>
+    <h3 style="color:#fff;margin-top:0.5rem;">Today you will&hellip;</h3>
+    <ul class="outcomes">
+      <li>Understand what machine learning is and how a model learns from examples</li>
+      <li>Create your own training images (circles and triangles) using Microsoft Paint</li>
+      <li>Build and test a 2-class image classification model on Teachable Machine</li>
+    </ul>
+  </div>
+
+  <!-- Equipment -->
+  <div class="box box-blue">
+    <h4>Equipment Needed</h4>
+    <ul>
+      <li>Windows PC with Chrome or Edge browser</li>
+      <li>Microsoft Paint</li>
+      <li>A folder on the desktop called <strong>TM_Lesson1</strong></li>
+    </ul>
+  </div>
+
+  <!-- Key Vocabulary -->
+  <h2>Key Vocabulary</h2>
+  <div class="vocab-list">
+    <div class="vocab-item"><strong>Machine Learning</strong><span>A type of AI where the computer learns from examples instead of being given rules.</span></div>
+    <div class="vocab-item"><strong>Model</strong><span>The thing the computer builds after learning — it can make predictions on new data.</span></div>
+    <div class="vocab-item"><strong>Class / Label</strong><span>A category or group. In this lesson your two classes are "Circle" and "Triangle".</span></div>
+    <div class="vocab-item"><strong>Training Data</strong><span>The example images you give the computer so it can learn.</span></div>
+    <div class="vocab-item"><strong>Prediction</strong><span>The model's guess about what it sees in a new image.</span></div>
+  </div>
+
+  <!-- Starter -->
+  <div class="box box-yellow">
+    <h4>Starter Activity (5 minutes)</h4>
+    <p><strong>Think about it:</strong> How do you know the difference between a circle and a triangle? Write down 2 differences below.</p>
+    <div class="form-group">
+      <label for="starter-1">Difference 1:</label>
+      <input type="text" id="starter-1" data-save="L1_starter1" placeholder="e.g. A circle has no corners...">
+    </div>
+    <div class="form-group">
+      <label for="starter-2">Difference 2:</label>
+      <input type="text" id="starter-2" data-save="L1_starter2" placeholder="e.g. A triangle has 3 straight sides...">
+    </div>
+    <div class="teacher-only">
+      <p><strong>Discussion points:</strong> Link to how computers need to "learn" these differences from examples rather than being told rules. Ask: "Could you write exact rules that always work?" — this leads to why ML is useful.</p>
+    </div>
+  </div>
+
+  <!-- Main Tasks -->
+  <h2>Main Tasks</h2>
+
+  <h3>Part A: Create Your Training Images</h3>
+  <ol class="steps">
+    <li>
+      <strong>Create a folder</strong> on your desktop called <code>TM_Lesson1</code>. Inside it, create two folders: <code>Circles</code> and <code>Triangles</code>.
+    </li>
+    <li>
+      <strong>Open Microsoft Paint</strong> from the Start menu.
+    </li>
+    <li>
+      <strong>Draw a circle</strong> using the shape tool. Use a <strong>white background</strong> and <strong>black outline</strong>. Make the circle fill most of the canvas.
+    </li>
+    <li>
+      <strong>Save the image</strong> as <code>circle_01.png</code> in your <code>Circles</code> folder. Use <em>File &gt; Save As &gt; PNG</em>.
+    </li>
+    <li>
+      <strong>Draw at least 10 different circles</strong>. Make each one slightly different — change the size, thickness, or position. Save each one with a different number (circle_02, circle_03, etc.).
+    </li>
+    <li>
+      <strong>Now draw at least 10 triangles</strong> in the same way. Save them as <code>triangle_01.png</code>, <code>triangle_02.png</code>, etc. in your <code>Triangles</code> folder.
+    </li>
+  </ol>
+
+  <div class="teacher-only">
+    <p><strong>Tip:</strong> Circulate and check students are varying their drawings. Common issue: students draw identical shapes — remind them variation helps the model learn. Aim for 10–15 per class minimum. Faster students can draw 20+.</p>
+  </div>
+
+  <h3>Part B: Build Your Model on Teachable Machine</h3>
+  <ol class="steps">
+    <li>
+      <strong>Open your browser</strong> and go to <strong>teachablemachine.withgoogle.com</strong>. Click <strong>"Get Started"</strong>.
+    </li>
+    <li>
+      Click <strong>"Image Project"</strong>, then choose <strong>"Standard image model"</strong>.
+    </li>
+    <li>
+      You will see two classes: <strong>Class 1</strong> and <strong>Class 2</strong>. Rename Class 1 to <strong>Circle</strong> and Class 2 to <strong>Triangle</strong>.
+    </li>
+    <li>
+      Under <strong>Circle</strong>, click <strong>"Upload"</strong> and then <strong>"Choose images from your files"</strong>. Navigate to your <code>Circles</code> folder and select <strong>all</strong> your circle images.
+    </li>
+    <li>
+      Do the same for <strong>Triangle</strong> — upload all your triangle images.
+    </li>
+    <li>
+      Click the big <strong>"Train Model"</strong> button. Wait for training to finish (do not switch tabs!).
+    </li>
+    <li>
+      Once trained, the <strong>Preview</strong> panel will appear on the right. Click <strong>"Choose images from your files"</strong> in the preview and test with one of your images. Does the model get it right?
+    </li>
+  </ol>
+
+  <!-- Results Table -->
+  <h3>Part C: Record Your Results</h3>
+  <p>Test your model with <strong>5 images</strong> (mix of circles and triangles). Record the results below:</p>
+
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th>Test Image</th>
+        <th>Actual Shape</th>
+        <th>Model's Prediction</th>
+        <th>Confidence (%)</th>
+        <th>Correct? (Yes/No)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><input type="text" data-save="L1_actual1" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_pred1" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_conf1" placeholder="e.g. 95%"></td>
+        <td><input type="text" data-save="L1_correct1" placeholder="Yes / No"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><input type="text" data-save="L1_actual2" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_pred2" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_conf2" placeholder="e.g. 88%"></td>
+        <td><input type="text" data-save="L1_correct2" placeholder="Yes / No"></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><input type="text" data-save="L1_actual3" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_pred3" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_conf3" placeholder="e.g. 72%"></td>
+        <td><input type="text" data-save="L1_correct3" placeholder="Yes / No"></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><input type="text" data-save="L1_actual4" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_pred4" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_conf4" placeholder="e.g. 60%"></td>
+        <td><input type="text" data-save="L1_correct4" placeholder="Yes / No"></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><input type="text" data-save="L1_actual5" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_pred5" placeholder="Circle or Triangle"></td>
+        <td><input type="text" data-save="L1_conf5" placeholder="e.g. 99%"></td>
+        <td><input type="text" data-save="L1_correct5" placeholder="Yes / No"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Common Mistakes -->
+  <div class="box box-red">
+    <h4>Common Mistakes &amp; Quick Fixes</h4>
+    <ul>
+      <li><strong>Model won't train:</strong> Make sure you uploaded images to <em>both</em> classes and you have at least 8 images per class.</li>
+      <li><strong>All predictions are wrong:</strong> Check you didn't mix up your folders (circles in the circle class, triangles in triangle).</li>
+      <li><strong>Low confidence scores:</strong> Try adding more training images with more variety.</li>
+      <li><strong>Training gets stuck:</strong> Don't switch tabs while training. If it freezes, refresh the page and re-upload.</li>
+    </ul>
+  </div>
+
+  <!-- Challenge -->
+  <div class="box box-purple">
+    <h4>Challenge / Stretch Task</h4>
+    <p>Draw 5 "tricky" images — shapes that are hard to classify (e.g. a very rough circle, a rounded triangle, or a shape that's half-way between). Test them with your model. What happens? Write your findings below.</p>
+    <div class="form-group">
+      <label for="challenge-1">What happened with your tricky images?</label>
+      <textarea id="challenge-1" data-save="L1_challenge" placeholder="Write what you found out..."></textarea>
+    </div>
+  </div>
+
+  <!-- Exit Ticket -->
+  <div class="exit-ticket">
+    <h3>Exit Ticket</h3>
+    <div class="form-group">
+      <label for="exit-1">1. What is machine learning?</label>
+      <input type="text" id="exit-1" data-save="L1_exit1" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit-2">2. What are the two "classes" you used in your model?</label>
+      <input type="text" id="exit-2" data-save="L1_exit2" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit-3">3. Why did you need to give the model lots of different examples?</label>
+      <input type="text" id="exit-3" data-save="L1_exit3" placeholder="Your answer...">
+    </div>
+    <div class="teacher-only">
+      <p><strong>Expected answers:</strong></p>
+      <ol>
+        <li>Machine learning is when a computer learns from examples/data instead of being given rules.</li>
+        <li>Circle and Triangle.</li>
+        <li>So the model can learn what different circles/triangles look like — more variety = better at recognising new ones.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Downloads -->
+  <h2>Lesson Downloads</h2>
+  <div class="download-grid">
+    <div class="download-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <h3>Demo Datasets</h3>
+      <p>Pre-made circle &amp; triangle images</p>
+      <a href="../assets/datasets/TeachableMachine_Demo_Datasets.zip" class="btn btn-primary btn-small" download>Download ZIP</a>
+    </div>
+    <div class="download-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <h3>Help Sheet</h3>
+      <p>Step-by-step Teachable Machine guide</p>
+      <a href="../assets/resources/Teachable_Machine_Student_Help_Sheet.docx" class="btn btn-outline btn-small" download>Download DOCX</a>
+    </div>
+  </div>
+
+  <!-- Mark Done + Reset -->
+  <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:2rem;">
+    <button class="btn btn-done" data-lesson="1">☐ Mark Lesson as Done</button>
+    <button class="btn btn-danger btn-small btn-reset-lesson" data-lesson="1">Reset This Lesson</button>
+  </div>
+
+  <!-- Nav -->
+  <div class="lesson-nav">
+    <a href="../index.html" class="btn btn-outline">&larr; Home</a>
+    <a href="lesson-2.html" class="btn btn-primary">Lesson 2 &rarr;</a>
+  </div>
+
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>

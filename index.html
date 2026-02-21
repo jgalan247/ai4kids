@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teachable Machine — Primary School</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Sidebar -->
+<div class="sidebar-overlay" aria-hidden="true"></div>
+<nav class="sidebar" aria-label="Main navigation">
+  <div class="sidebar-brand">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M10 16l4 4 8-8"/></svg>
+      <div>
+        <div class="logo-text">Teachable Machine</div>
+        <div class="logo-sub">Primary School</div>
+      </div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <ul>
+      <li class="nav-section-title">Home</li>
+      <li><a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg>
+        Unit Overview</a></li>
+
+      <li class="nav-section-title">Lessons</li>
+      <li><a href="lessons/lesson-1.html" data-lesson="1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg>
+        1 – Your First Model</a></li>
+      <li><a href="lessons/lesson-2.html" data-lesson="2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg>
+        2 – Bias &amp; Fairness</a></li>
+      <li><a href="lessons/lesson-3.html" data-lesson="3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg>
+        3 – Train vs Test</a></li>
+      <li><a href="lessons/lesson-4.html" data-lesson="4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg>
+        4 – Three Classes</a></li>
+      <li><a href="lessons/lesson-5.html" data-lesson="5">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg>
+        5 – Product Design</a></li>
+      <li><a href="lessons/lesson-6.html" data-lesson="6">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg>
+        6 – Showcase</a></li>
+
+      <li class="nav-section-title">Support</li>
+      <li><a href="resources/index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resources</a></li>
+      <li><a href="help/index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 015.12 1.5c0 1.5-2.12 2-2.12 3.5"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg>
+        Help Sheet</a></li>
+      <li><a href="teacher/index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        Teacher Notes</a></li>
+      <li><a href="glossary.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        Glossary</a></li>
+      <li><a href="about.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg>
+        About</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">
+    &copy; 2026 &middot; Primary School &middot; Think Big, Start Small!
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <h1>Teachable Machine</h1>
+    <span class="badge">Primary School</span>
+  </div>
+  <div class="header-right">
+    <div class="mode-toggle">
+      <label for="mode-checkbox">Student</label>
+      <div class="toggle-switch">
+        <input type="checkbox" id="mode-checkbox" aria-label="Toggle teacher mode">
+        <span class="slider"></span>
+      </div>
+      <label for="mode-checkbox">Teacher</label>
+    </div>
+    <div class="progress-bar-mini" title="Lesson progress">
+      <div class="fill" style="width:0%"></div>
+    </div>
+    <span class="progress-text" style="font-size:0.8rem;font-weight:600;color:#64748b;">0/6</span>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="main-content" id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welcome to the Teachable Machine Unit!</h1>
+    <p>In this unit you will learn how to train a real AI model using Google's Teachable Machine — no coding needed! You'll create image classifiers, explore bias, test accuracy, and design your own AI product idea.</p>
+  </section>
+
+  <!-- What You'll Learn -->
+  <section class="card">
+    <h2>What You Will Learn</h2>
+    <ul>
+      <li>How machine learning models are trained using labelled data</li>
+      <li>How to create a 2-class and 3-class image classification model</li>
+      <li>What bias means in AI and why it matters</li>
+      <li>How to test a model properly using separate training and testing data</li>
+      <li>How to calculate accuracy and improve a model</li>
+      <li>How to design an AI product idea and evaluate it</li>
+      <li>How to present your work and reflect on what AI can and cannot do</li>
+    </ul>
+  </section>
+
+  <!-- What You'll Need -->
+  <section class="card">
+    <h2>What You Will Need</h2>
+    <div class="box box-blue">
+      <h4>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Equipment for every lesson
+      </h4>
+      <ul>
+        <li>A Windows PC with a web browser (Chrome or Edge)</li>
+        <li>Microsoft Paint (for drawing shapes)</li>
+        <li>A folder on the desktop to save your images</li>
+        <li>Access to <strong>teachablemachine.withgoogle.com</strong></li>
+      </ul>
+      <p><strong>Note:</strong> No camera or microphone is needed! You will use drawn images, not photos.</p>
+    </div>
+  </section>
+
+  <!-- Progress Overview -->
+  <section>
+    <h2>Your Progress</h2>
+    <div class="progress-overview">
+      <a href="lessons/lesson-1.html" class="progress-card" data-lesson="1">
+        <div class="lesson-num">1</div>
+        <div class="lesson-title">Your First Model</div>
+        <div class="status-icon">○ To do</div>
+      </a>
+      <a href="lessons/lesson-2.html" class="progress-card" data-lesson="2">
+        <div class="lesson-num">2</div>
+        <div class="lesson-title">Bias &amp; Fairness</div>
+        <div class="status-icon">○ To do</div>
+      </a>
+      <a href="lessons/lesson-3.html" class="progress-card" data-lesson="3">
+        <div class="lesson-num">3</div>
+        <div class="lesson-title">Train vs Test</div>
+        <div class="status-icon">○ To do</div>
+      </a>
+      <a href="lessons/lesson-4.html" class="progress-card" data-lesson="4">
+        <div class="lesson-num">4</div>
+        <div class="lesson-title">Three Classes</div>
+        <div class="status-icon">○ To do</div>
+      </a>
+      <a href="lessons/lesson-5.html" class="progress-card" data-lesson="5">
+        <div class="lesson-num">5</div>
+        <div class="lesson-title">Product Design</div>
+        <div class="status-icon">○ To do</div>
+      </a>
+      <a href="lessons/lesson-6.html" class="progress-card" data-lesson="6">
+        <div class="lesson-num">6</div>
+        <div class="lesson-title">Showcase</div>
+        <div class="status-icon">○ To do</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Safety & Expectations -->
+  <section class="card">
+    <h2>Safety &amp; Expectations</h2>
+    <div class="box box-yellow">
+      <h4>Classroom Rules for This Unit</h4>
+      <ol>
+        <li>Only use Teachable Machine for the tasks your teacher sets.</li>
+        <li>Do <strong>not</strong> take photos of other students or upload personal images.</li>
+        <li>Save all your work in your designated folder.</li>
+        <li>Be respectful when discussing AI — listen to others' ideas.</li>
+        <li>Ask your teacher if you are stuck — it's OK not to know!</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- How to Use This Site -->
+  <section class="card">
+    <h2>How to Use This Site</h2>
+    <ul>
+      <li>Use the <strong>sidebar</strong> on the left to navigate between lessons and pages.</li>
+      <li>Each lesson page has step-by-step instructions — follow them in order.</li>
+      <li>Fill in tables and answer questions directly on the page — your work is <strong>saved automatically</strong>.</li>
+      <li>When you finish a lesson, click the green <strong>"Mark Lesson as Done"</strong> button.</li>
+      <li>Use the <strong>Resources</strong> page to download worksheets, help sheets, and datasets.</li>
+      <li>If you need help, check the <strong>Help Sheet</strong> page or ask your teacher.</li>
+    </ul>
+  </section>
+
+  <!-- Teacher note (hidden in student mode) -->
+  <div class="teacher-only">
+    <p><strong>Unit Overview:</strong> This is a 6-lesson unit designed for Primary School students. Each lesson is 45–60 minutes. Students use Google Teachable Machine to build image classifiers using hand-drawn shapes (no camera/mic needed). The unit covers: building models, bias, testing, multi-class classification, product design, and reflection/ethics.</p>
+    <p>All worksheets, starter slides, and datasets can be downloaded from the <a href="resources/index.html">Resources</a> page.</p>
+  </div>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

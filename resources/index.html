@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Teachable Machine</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="sidebar-overlay" aria-hidden="true"></div>
+<nav class="sidebar" aria-label="Main navigation">
+  <div class="sidebar-brand">
+    <a href="../index.html" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M10 16l4 4 8-8"/></svg>
+      <div><div class="logo-text">Teachable Machine</div><div class="logo-sub">Primary School</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <ul>
+      <li class="nav-section-title">Home</li>
+      <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg> Unit Overview</a></li>
+      <li class="nav-section-title">Lessons</li>
+      <li><a href="../lessons/lesson-1.html" data-lesson="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 1 – Your First Model</a></li>
+      <li><a href="../lessons/lesson-2.html" data-lesson="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 2 – Bias &amp; Fairness</a></li>
+      <li><a href="../lessons/lesson-3.html" data-lesson="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 3 – Train vs Test</a></li>
+      <li><a href="../lessons/lesson-4.html" data-lesson="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 4 – Three Classes</a></li>
+      <li><a href="../lessons/lesson-5.html" data-lesson="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 5 – Product Design</a></li>
+      <li><a href="../lessons/lesson-6.html" data-lesson="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 6 – Showcase</a></li>
+      <li class="nav-section-title">Support</li>
+      <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Resources</a></li>
+      <li><a href="../help/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 015.12 1.5c0 1.5-2.12 2-2.12 3.5"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg> Help Sheet</a></li>
+      <li><a href="../teacher/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/></svg> Teacher Notes</a></li>
+      <li><a href="../glossary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Glossary</a></li>
+      <li><a href="../about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg> About</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">&copy; 2026 &middot; Primary School &middot; Think Big, Start Small!</div>
+</nav>
+
+<header class="site-header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <h1>Teachable Machine</h1><span class="badge">Primary School</span>
+  </div>
+  <div class="header-right">
+    <div class="mode-toggle">
+      <label for="mode-checkbox">Student</label>
+      <div class="toggle-switch"><input type="checkbox" id="mode-checkbox" aria-label="Toggle teacher mode"><span class="slider"></span></div>
+      <label for="mode-checkbox">Teacher</label>
+    </div>
+    <div class="progress-bar-mini" title="Lesson progress"><div class="fill" style="width:0%"></div></div>
+    <span class="progress-text" style="font-size:0.8rem;font-weight:600;color:#64748b;">0/6</span>
+  </div>
+</header>
+
+<main class="main-content" id="main">
+
+  <h1>Resources &amp; Downloads</h1>
+  <p>Download all the files you need for this unit. Click the buttons below to save each file to your computer.</p>
+
+  <!-- Download Cards -->
+  <h2>Downloads</h2>
+  <div class="download-grid">
+    <div class="download-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <h3>Unit Pack</h3>
+      <p>Full scheme of work + all 6 student worksheets (DOCX)</p>
+      <a href="../assets/resources/Teachable_Machine_Year7_6_Lessons.docx" class="btn btn-primary btn-small" download>Download DOCX</a>
+    </div>
+    <div class="download-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><circle cx="12" cy="15" r="2"/><path d="M12 11v2"/></svg>
+      <h3>Student Help Sheet</h3>
+      <p>Step-by-step guide to using Teachable Machine (DOCX)</p>
+      <a href="../assets/resources/Teachable_Machine_Student_Help_Sheet.docx" class="btn btn-primary btn-small" download>Download DOCX</a>
+    </div>
+    <div class="download-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <h3>Starter Slide Deck</h3>
+      <p>PowerPoint slides for lesson starters (PPTX)</p>
+      <a href="../assets/resources/Teachable_Machine_Year7_6_Lessons_Starter_Deck.pptx" class="btn btn-primary btn-small" download>Download PPTX</a>
+    </div>
+    <div class="download-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <h3>Demo Datasets</h3>
+      <p>Pre-made training &amp; testing images (ZIP)</p>
+      <a href="../assets/datasets/TeachableMachine_Demo_Datasets.zip" class="btn btn-primary btn-small" download>Download ZIP</a>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <h2>How to Set Up Your Files</h2>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Step 1: Create Your Project Folder</h3>
+    <ol class="steps">
+      <li>On your desktop, <strong>right-click</strong> and choose <strong>New &gt; Folder</strong>.</li>
+      <li>Name the folder <code>TeachableMachine_Unit</code>.</li>
+      <li>Download all the files above and save them into this folder.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Step 2: Unzip the Dataset</h3>
+    <ol class="steps">
+      <li>Find the <code>TeachableMachine_Demo_Datasets.zip</code> file in your folder.</li>
+      <li><strong>Right-click</strong> on it and choose <strong>"Extract All..."</strong></li>
+      <li>Click <strong>Extract</strong>. This will create a new folder with all the image files inside.</li>
+      <li>Inside you should see folders organised by lesson and shape type.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Step 3: Understand the Dataset Structure</h3>
+    <p>The demo dataset is organised like this:</p>
+    <pre style="background:#f1f5f9;padding:1rem;border-radius:8px;font-size:0.9rem;overflow-x:auto;">
+TeachableMachine_Demo_Datasets/
+├── Balanced_Dataset/
+│   ├── TRAIN/
+│   │   ├── Circles/      (10+ images)
+│   │   ├── Triangles/    (10+ images)
+│   │   └── Squares/      (10+ images)
+│   └── TEST/
+│       ├── Circles/      (5 images)
+│       ├── Triangles/    (5 images)
+│       └── Squares/      (5 images)
+│
+└── Biased_Dataset/
+    ├── Circles_YellowBG/ (circles on yellow)
+    └── Triangles_BlueBG/ (triangles on blue)
+    </pre>
+  </div>
+
+  <!-- Dataset Explanation -->
+  <h2>About the Datasets</h2>
+
+  <div class="box box-green">
+    <h4>Balanced Dataset vs Biased Dataset</h4>
+    <p><strong>Balanced dataset:</strong> Both classes have the same number of images, and all images use the same white background. The model has to learn the <em>shape</em> itself.</p>
+    <p><strong>Biased dataset:</strong> Circles are on a yellow background and triangles are on a blue background. The model might learn the <em>background colour</em> instead of the shape — this is the "background trick" used in Lesson 2.</p>
+  </div>
+
+  <div class="box box-blue">
+    <h4>TRAIN vs TEST — Why It Matters</h4>
+    <p><strong>TRAIN folder:</strong> These images are used to <em>teach</em> the model. You upload them into Teachable Machine's classes.</p>
+    <p><strong>TEST folder:</strong> These images are used to <em>check</em> the model. They must be images the model has <strong>never seen before</strong>. This tells you how the model will perform on new, real-world data.</p>
+    <p>If you test with training images, you might get 100% accuracy — but that doesn't mean the model actually learned. It might have just memorised. Always test with fresh images!</p>
+  </div>
+
+  <div class="teacher-only">
+    <h3>Teacher Notes: Managing Resources</h3>
+    <ul>
+      <li>The demo dataset ZIP should be pre-downloaded onto student machines or available on a shared drive.</li>
+      <li>If students struggle with unzipping, demonstrate it on the board first.</li>
+      <li>For Lesson 2, students can use the Biased_Dataset folder directly, or draw their own.</li>
+      <li>The balanced dataset is useful for Lessons 1, 3, and 4 as a fallback for students who haven't drawn enough images.</li>
+    </ul>
+  </div>
+
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>

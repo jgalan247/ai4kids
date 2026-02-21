@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Sheet | Teachable Machine</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="sidebar-overlay" aria-hidden="true"></div>
+<nav class="sidebar" aria-label="Main navigation">
+  <div class="sidebar-brand">
+    <a href="../index.html" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M10 16l4 4 8-8"/></svg>
+      <div><div class="logo-text">Teachable Machine</div><div class="logo-sub">Primary School</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <ul>
+      <li class="nav-section-title">Home</li>
+      <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg> Unit Overview</a></li>
+      <li class="nav-section-title">Lessons</li>
+      <li><a href="../lessons/lesson-1.html" data-lesson="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 1 – Your First Model</a></li>
+      <li><a href="../lessons/lesson-2.html" data-lesson="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 2 – Bias &amp; Fairness</a></li>
+      <li><a href="../lessons/lesson-3.html" data-lesson="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 3 – Train vs Test</a></li>
+      <li><a href="../lessons/lesson-4.html" data-lesson="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 4 – Three Classes</a></li>
+      <li><a href="../lessons/lesson-5.html" data-lesson="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 5 – Product Design</a></li>
+      <li><a href="../lessons/lesson-6.html" data-lesson="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 6 – Showcase</a></li>
+      <li class="nav-section-title">Support</li>
+      <li><a href="../resources/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Resources</a></li>
+      <li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 015.12 1.5c0 1.5-2.12 2-2.12 3.5"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg> Help Sheet</a></li>
+      <li><a href="../teacher/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/></svg> Teacher Notes</a></li>
+      <li><a href="../glossary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Glossary</a></li>
+      <li><a href="../about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg> About</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">&copy; 2026 &middot; Primary School &middot; Think Big, Start Small!</div>
+</nav>
+
+<header class="site-header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <h1>Teachable Machine</h1><span class="badge">Primary School</span>
+  </div>
+  <div class="header-right">
+    <div class="mode-toggle">
+      <label for="mode-checkbox">Student</label>
+      <div class="toggle-switch"><input type="checkbox" id="mode-checkbox" aria-label="Toggle teacher mode"><span class="slider"></span></div>
+      <label for="mode-checkbox">Teacher</label>
+    </div>
+    <div class="progress-bar-mini" title="Lesson progress"><div class="fill" style="width:0%"></div></div>
+    <span class="progress-text" style="font-size:0.8rem;font-weight:600;color:#64748b;">0/6</span>
+  </div>
+</header>
+
+<main class="main-content" id="main">
+
+  <h1>Student Help Sheet</h1>
+  <p>This page shows you how to use Teachable Machine step by step. Use it whenever you get stuck!</p>
+
+  <div class="box box-blue">
+    <h4>Download the printable version</h4>
+    <p>You can also download this as a Word document:</p>
+    <a href="../assets/resources/Teachable_Machine_Student_Help_Sheet.docx" class="btn btn-primary btn-small" download>Download Help Sheet (DOCX)</a>
+  </div>
+
+  <!-- Step-by-step guide -->
+  <h2>How to Use Teachable Machine</h2>
+
+  <div class="card">
+    <h3 style="margin-top:0;">1. Open Teachable Machine</h3>
+    <ol class="steps">
+      <li>Open <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong>.</li>
+      <li>Type <strong>teachablemachine.withgoogle.com</strong> in the address bar and press Enter.</li>
+      <li>Click the <strong>"Get Started"</strong> button.</li>
+      <li>Click <strong>"Image Project"</strong>.</li>
+      <li>Choose <strong>"Standard image model"</strong>.</li>
+    </ol>
+    <div style="background:#f1f5f9;border:2px dashed #cbd5e1;border-radius:8px;padding:2rem;text-align:center;color:#94a3b8;margin-top:1rem;">
+      [Screenshot placeholder: Teachable Machine home page with "Get Started" button highlighted]
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">2. Set Up Your Classes</h3>
+    <ol class="steps">
+      <li>You will see <strong>Class 1</strong> and <strong>Class 2</strong> on the left.</li>
+      <li>Click the <strong>pencil icon</strong> next to "Class 1" to rename it (e.g. "Circle").</li>
+      <li>Rename "Class 2" as well (e.g. "Triangle").</li>
+      <li>To add more classes, click <strong>"+ Add a class"</strong> at the bottom.</li>
+    </ol>
+    <div style="background:#f1f5f9;border:2px dashed #cbd5e1;border-radius:8px;padding:2rem;text-align:center;color:#94a3b8;margin-top:1rem;">
+      [Screenshot placeholder: Classes panel with renamed classes]
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">3. Upload Your Images</h3>
+    <ol class="steps">
+      <li>Under each class, click <strong>"Upload"</strong>.</li>
+      <li>Click <strong>"Choose images from your files"</strong>.</li>
+      <li>Navigate to your folder and select all the images for that class.</li>
+      <li>You can select multiple images at once by holding <strong>Ctrl</strong> and clicking each one, or press <strong>Ctrl+A</strong> to select all.</li>
+      <li>Repeat for each class.</li>
+    </ol>
+    <div style="background:#f1f5f9;border:2px dashed #cbd5e1;border-radius:8px;padding:2rem;text-align:center;color:#94a3b8;margin-top:1rem;">
+      [Screenshot placeholder: Upload dialog with images being selected]
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">4. Train Your Model</h3>
+    <ol class="steps">
+      <li>Once all classes have images, click the big <strong>"Train Model"</strong> button in the middle.</li>
+      <li><strong>IMPORTANT:</strong> Do NOT switch tabs or minimise the browser while training!</li>
+      <li>Wait for the training to finish. You will see a progress bar.</li>
+      <li>When it's done, the <strong>Preview</strong> panel will appear on the right.</li>
+    </ol>
+    <div style="background:#f1f5f9;border:2px dashed #cbd5e1;border-radius:8px;padding:2rem;text-align:center;color:#94a3b8;margin-top:1rem;">
+      [Screenshot placeholder: Train Model button and progress bar]
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">5. Test Your Model</h3>
+    <ol class="steps">
+      <li>In the <strong>Preview</strong> panel on the right, you can choose how to test.</li>
+      <li>Click <strong>"File"</strong> tab, then <strong>"Choose images from your files"</strong>.</li>
+      <li>Select a test image. The model will show its prediction and confidence percentage.</li>
+      <li>Record the result in your results table.</li>
+      <li>Test with several images to see how accurate your model is.</li>
+    </ol>
+    <div style="background:#f1f5f9;border:2px dashed #cbd5e1;border-radius:8px;padding:2rem;text-align:center;color:#94a3b8;margin-top:1rem;">
+      [Screenshot placeholder: Preview panel showing prediction result]
+    </div>
+  </div>
+
+  <!-- Drawing Tips -->
+  <h2>Tips for Drawing Good Training Images</h2>
+  <div class="box box-green">
+    <h4>Do:</h4>
+    <ul>
+      <li>Use a <strong>white background</strong> for all images (unless told otherwise)</li>
+      <li>Draw with <strong>black lines</strong> so the shape is clear</li>
+      <li>Make each image <strong>slightly different</strong> — change size, position, thickness</li>
+      <li>Draw at least <strong>10 images per class</strong></li>
+      <li>Save as <strong>PNG</strong> format</li>
+    </ul>
+  </div>
+
+  <div class="box box-red">
+    <h4>Don't:</h4>
+    <ul>
+      <li>Don't draw all images exactly the same — the model needs variety</li>
+      <li>Don't use different coloured backgrounds for different classes (unless testing bias)</li>
+      <li>Don't make images too tiny — the shape should fill most of the canvas</li>
+      <li>Don't save as JPEG if possible — PNG keeps the image clearer</li>
+    </ul>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="card">
+    <h3 style="margin-top:0;">My model won't train — what do I do?</h3>
+    <p>Make sure you have uploaded images to <strong>at least two classes</strong> and each class has at least 2 images (aim for 10+). Check you haven't accidentally left a class empty. Try refreshing the page and uploading again.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">The training gets stuck or freezes.</h3>
+    <p>Don't switch to another tab while training — this can pause it. If it freezes completely, refresh the page (F5) and start again. Your images won't be saved on the site, so you'll need to re-upload them.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">My model gets everything wrong!</h3>
+    <p>Check these things:</p>
+    <ul>
+      <li>Did you put the right images in the right class? (e.g. circles in Circle, not Triangle)</li>
+      <li>Are your images clear enough? Small or blurry images confuse the model.</li>
+      <li>Do you have enough images? More is better — try 15–20 per class.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">How do I save my model?</h3>
+    <p>Unfortunately, Teachable Machine doesn't save automatically between sessions. If you close the browser, you'll need to re-upload and re-train. However, your images are saved on your computer, so you can quickly re-upload them.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Can I use the webcam?</h3>
+    <p>In this unit, we are <strong>not using the webcam</strong>. We use uploaded images instead. This is so we can control exactly what the model sees and learn about datasets properly.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">How do I add a third class?</h3>
+    <p>Scroll down below Class 2 and click the <strong>"+ Add a class"</strong> button. You can add as many classes as you like!</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">What does the percentage/confidence mean?</h3>
+    <p>The percentage shows how <strong>confident</strong> the model is in its prediction. 95% means the model is very sure. 55% means it's not very sure and could easily be wrong. Higher is better!</p>
+  </div>
+
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 – Showcase &amp; Reflection | Teachable Machine</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="sidebar-overlay" aria-hidden="true"></div>
+<nav class="sidebar" aria-label="Main navigation">
+  <div class="sidebar-brand">
+    <a href="../index.html" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M10 16l4 4 8-8"/></svg>
+      <div><div class="logo-text">Teachable Machine</div><div class="logo-sub">Primary School</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <ul>
+      <li class="nav-section-title">Home</li>
+      <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg> Unit Overview</a></li>
+      <li class="nav-section-title">Lessons</li>
+      <li><a href="lesson-1.html" data-lesson="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 1 – Your First Model</a></li>
+      <li><a href="lesson-2.html" data-lesson="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 2 – Bias &amp; Fairness</a></li>
+      <li><a href="lesson-3.html" data-lesson="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 3 – Train vs Test</a></li>
+      <li><a href="lesson-4.html" data-lesson="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 4 – Three Classes</a></li>
+      <li><a href="lesson-5.html" data-lesson="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 5 – Product Design</a></li>
+      <li><a href="lesson-6.html" data-lesson="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 6 – Showcase</a></li>
+      <li class="nav-section-title">Support</li>
+      <li><a href="../resources/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Resources</a></li>
+      <li><a href="../help/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 015.12 1.5c0 1.5-2.12 2-2.12 3.5"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg> Help Sheet</a></li>
+      <li><a href="../teacher/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/></svg> Teacher Notes</a></li>
+      <li><a href="../glossary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Glossary</a></li>
+      <li><a href="../about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg> About</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">&copy; 2026 &middot; Primary School &middot; Think Big, Start Small!</div>
+</nav>
+
+<header class="site-header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <h1>Teachable Machine</h1><span class="badge">Primary School</span>
+  </div>
+  <div class="header-right">
+    <div class="mode-toggle">
+      <label for="mode-checkbox">Student</label>
+      <div class="toggle-switch"><input type="checkbox" id="mode-checkbox" aria-label="Toggle teacher mode"><span class="slider"></span></div>
+      <label for="mode-checkbox">Teacher</label>
+    </div>
+    <div class="progress-bar-mini" title="Lesson progress"><div class="fill" style="width:0%"></div></div>
+    <span class="progress-text" style="font-size:0.8rem;font-weight:600;color:#64748b;">0/6</span>
+  </div>
+</header>
+
+<main class="main-content" id="main">
+
+  <div class="lesson-banner">
+    <h1>Lesson 6: Showcase &amp; Reflection</h1>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 45–60 minutes</span>
+      <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Windows PC, Browser</span>
+    </div>
+    <h3 style="color:#fff;margin-top:0.5rem;">Today you will&hellip;</h3>
+    <ul class="outcomes">
+      <li>Present your AI product to the class (or a partner)</li>
+      <li>Reflect on what you have learned across the whole unit</li>
+      <li>Discuss what AI can and cannot do ("Mythbusters" ethics activity)</li>
+    </ul>
+  </div>
+
+  <div class="box box-blue">
+    <h4>Equipment Needed</h4>
+    <ul>
+      <li>Windows PC with browser (to show your Teachable Machine model)</li>
+      <li>Your completed product from Lesson 5</li>
+    </ul>
+  </div>
+
+  <h2>Key Vocabulary</h2>
+  <div class="vocab-list">
+    <div class="vocab-item"><strong>Ethics</strong><span>Thinking about what is right and wrong — should we use AI for everything?</span></div>
+    <div class="vocab-item"><strong>Reflection</strong><span>Looking back at what you learned and how you could improve.</span></div>
+    <div class="vocab-item"><strong>Showcase</strong><span>Presenting your work to an audience to explain what you made and how it works.</span></div>
+  </div>
+
+  <div class="box box-yellow">
+    <h4>Starter Activity (5 minutes)</h4>
+    <p><strong>Quick fire:</strong> Without looking back, write down as many key words from this unit as you can remember in 2 minutes.</p>
+    <div class="form-group">
+      <label for="s6-1">Key words I remember:</label>
+      <textarea id="s6-1" data-save="L6_starter1" placeholder="machine learning, model, class, bias, training data, testing data, accuracy, prediction..."></textarea>
+    </div>
+    <div class="teacher-only">
+      <p><strong>Target words:</strong> machine learning, model, class/label, training data, testing data, accuracy, prediction, bias, fairness, overfitting, confidence, balanced dataset. Award points for each correct keyword.</p>
+    </div>
+  </div>
+
+  <h2>Main Tasks</h2>
+
+  <h3>Part A: Showcase Your Product (20 minutes)</h3>
+  <div class="box box-green">
+    <h4>Presentation Guide</h4>
+    <p>Present your Lesson 5 product to your partner or the class. Cover these points:</p>
+    <ol>
+      <li><strong>Product name</strong> and what problem it solves</li>
+      <li><strong>Who</strong> is the target user?</li>
+      <li><strong>Demo:</strong> Show your model working on Teachable Machine</li>
+      <li><strong>Accuracy:</strong> How well does it work? Show your results.</li>
+      <li><strong>Improvements:</strong> What would you change if you had more time?</li>
+    </ol>
+  </div>
+
+  <p>After presenting, get feedback from your partner or the class:</p>
+  <div class="form-group">
+    <label for="feedback">Feedback I received:</label>
+    <textarea id="feedback" data-save="L6_feedback" placeholder="Write the feedback you received from your partner/class..."></textarea>
+  </div>
+
+  <div class="teacher-only">
+    <p><strong>Organisation options:</strong></p>
+    <ul>
+      <li><strong>Pairs:</strong> Students present to a partner, then swap. Each gives 2 stars and a wish.</li>
+      <li><strong>Gallery walk:</strong> Students set up their model on screen, class walks around and tries each one.</li>
+      <li><strong>Whole class:</strong> Select 3–4 volunteers to present to everyone. Use a timer (3 mins each).</li>
+    </ul>
+  </div>
+
+  <h3>Part B: AI Mythbusters (15 minutes)</h3>
+  <p>For each statement, decide: is it <strong>TRUE</strong> or <strong>FALSE</strong>? Write your answer and explain why.</p>
+
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th style="width:50%">Statement</th>
+        <th style="width:15%">True or False?</th>
+        <th style="width:35%">Why?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>"AI can think and feel like a human."</td>
+        <td><input type="text" data-save="L6_myth1_tf" placeholder="T / F"></td>
+        <td><input type="text" data-save="L6_myth1_why" placeholder="Explain..."></td>
+      </tr>
+      <tr>
+        <td>"AI is always fair and unbiased."</td>
+        <td><input type="text" data-save="L6_myth2_tf" placeholder="T / F"></td>
+        <td><input type="text" data-save="L6_myth2_why" placeholder="Explain..."></td>
+      </tr>
+      <tr>
+        <td>"AI learns from data — if the data is bad, the AI is bad."</td>
+        <td><input type="text" data-save="L6_myth3_tf" placeholder="T / F"></td>
+        <td><input type="text" data-save="L6_myth3_why" placeholder="Explain..."></td>
+      </tr>
+      <tr>
+        <td>"AI will replace all human jobs."</td>
+        <td><input type="text" data-save="L6_myth4_tf" placeholder="T / F"></td>
+        <td><input type="text" data-save="L6_myth4_why" placeholder="Explain..."></td>
+      </tr>
+      <tr>
+        <td>"AI needs humans to create and check it."</td>
+        <td><input type="text" data-save="L6_myth5_tf" placeholder="T / F"></td>
+        <td><input type="text" data-save="L6_myth5_why" placeholder="Explain..."></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="teacher-only">
+    <p><strong>Answers:</strong></p>
+    <ol>
+      <li><strong>FALSE</strong> — AI doesn't have feelings, consciousness, or understanding. It follows patterns in data.</li>
+      <li><strong>FALSE</strong> — AI can be biased if trained on biased data (as we saw in Lesson 2).</li>
+      <li><strong>TRUE</strong> — This is the key lesson from the unit. "Garbage in, garbage out."</li>
+      <li><strong>FALSE (mostly)</strong> — AI will change many jobs but not replace all of them. Jobs requiring creativity, empathy, and complex judgement are harder to automate.</li>
+      <li><strong>TRUE</strong> — Humans create AI, choose the training data, and need to check it works properly and fairly.</li>
+    </ol>
+  </div>
+
+  <h3>Part C: Unit Reflection</h3>
+  <div class="card">
+    <h3 style="margin-top:0;">Looking Back at the Unit</h3>
+    <div class="form-group">
+      <label for="ref-1">What is the most important thing you learned in this unit?</label>
+      <textarea id="ref-1" data-save="L6_reflect1" placeholder="Write your answer..."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="ref-2">What did you find most difficult?</label>
+      <textarea id="ref-2" data-save="L6_reflect2" placeholder="Write your answer..."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="ref-3">What are you most proud of?</label>
+      <textarea id="ref-3" data-save="L6_reflect3" placeholder="Write your answer..."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="ref-4">If you could give advice to next year's class about this unit, what would you say?</label>
+      <textarea id="ref-4" data-save="L6_reflect4" placeholder="Write your advice..."></textarea>
+    </div>
+  </div>
+
+  <div class="box box-red">
+    <h4>Common Mistakes &amp; Quick Fixes</h4>
+    <ul>
+      <li><strong>Presentation too short:</strong> Make sure you cover all 5 points in the presentation guide above.</li>
+      <li><strong>Can't remember model results:</strong> Check your Lesson 5 page — your answers are saved!</li>
+      <li><strong>Mythbusters too easy:</strong> Discuss in pairs first, then as a class. Encourage debate!</li>
+    </ul>
+  </div>
+
+  <div class="box box-purple">
+    <h4>Challenge / Stretch Task</h4>
+    <p>Write a short paragraph (4–5 sentences) explaining to a Year 6 student what machine learning is and why understanding bias matters. Use simple language they would understand.</p>
+    <div class="form-group">
+      <label for="challenge-6">Your explanation:</label>
+      <textarea id="challenge-6" data-save="L6_challenge" placeholder="Machine learning is when a computer learns from examples..."></textarea>
+    </div>
+  </div>
+
+  <div class="exit-ticket">
+    <h3>Exit Ticket</h3>
+    <div class="form-group">
+      <label for="exit6-1">1. Give one example of how AI could be used for good.</label>
+      <input type="text" id="exit6-1" data-save="L6_exit1" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit6-2">2. Give one risk or problem with AI.</label>
+      <input type="text" id="exit6-2" data-save="L6_exit2" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit6-3">3. Why is it important for humans to check AI systems?</label>
+      <input type="text" id="exit6-3" data-save="L6_exit3" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit6-4">4. Rate your confidence with AI (1=not confident, 5=very confident):</label>
+      <input type="number" id="exit6-4" data-save="L6_exit4" min="1" max="5" placeholder="1-5" style="width:80px;">
+    </div>
+    <div class="teacher-only">
+      <p><strong>Expected answers:</strong></p>
+      <ol>
+        <li>Examples: medical diagnosis, sorting recycling, helping blind people navigate, detecting wildfires.</li>
+        <li>Examples: bias/discrimination, privacy concerns, job losses, deepfakes, over-reliance on technology.</li>
+        <li>Because AI can be biased, make mistakes, or be used in harmful ways. Humans need to make sure AI is fair, accurate, and used responsibly.</li>
+        <li>Self-assessment — look for students who can justify their rating.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:2rem;">
+    <button class="btn btn-done" data-lesson="6">☐ Mark Lesson as Done</button>
+    <button class="btn btn-danger btn-small btn-reset-lesson" data-lesson="6">Reset This Lesson</button>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="lesson-5.html" class="btn btn-outline">&larr; Lesson 5</a>
+    <a href="../index.html" class="btn btn-primary">Home &rarr;</a>
+  </div>
+
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>

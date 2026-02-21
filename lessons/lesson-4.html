@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 – Three Classes | Teachable Machine</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="sidebar-overlay" aria-hidden="true"></div>
+<nav class="sidebar" aria-label="Main navigation">
+  <div class="sidebar-brand">
+    <a href="../index.html" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="14"/><path d="M10 16l4 4 8-8"/></svg>
+      <div><div class="logo-text">Teachable Machine</div><div class="logo-sub">Primary School</div></div>
+    </a>
+  </div>
+  <div class="sidebar-nav">
+    <ul>
+      <li class="nav-section-title">Home</li>
+      <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg> Unit Overview</a></li>
+      <li class="nav-section-title">Lessons</li>
+      <li><a href="lesson-1.html" data-lesson="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 1 – Your First Model</a></li>
+      <li><a href="lesson-2.html" data-lesson="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 2 – Bias &amp; Fairness</a></li>
+      <li><a href="lesson-3.html" data-lesson="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 3 – Train vs Test</a></li>
+      <li><a href="lesson-4.html" data-lesson="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 4 – Three Classes</a></li>
+      <li><a href="lesson-5.html" data-lesson="5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 5 – Product Design</a></li>
+      <li><a href="lesson-6.html" data-lesson="6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4"/></svg> 6 – Showcase</a></li>
+      <li class="nav-section-title">Support</li>
+      <li><a href="../resources/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Resources</a></li>
+      <li><a href="../help/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 9a3 3 0 015.12 1.5c0 1.5-2.12 2-2.12 3.5"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg> Help Sheet</a></li>
+      <li><a href="../teacher/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/></svg> Teacher Notes</a></li>
+      <li><a href="../glossary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Glossary</a></li>
+      <li><a href="../about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><circle cx="12" cy="8" r="0.5" fill="currentColor"/></svg> About</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-footer">&copy; 2026 &middot; Primary School &middot; Think Big, Start Small!</div>
+</nav>
+
+<header class="site-header">
+  <div class="header-left">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <h1>Teachable Machine</h1><span class="badge">Primary School</span>
+  </div>
+  <div class="header-right">
+    <div class="mode-toggle">
+      <label for="mode-checkbox">Student</label>
+      <div class="toggle-switch"><input type="checkbox" id="mode-checkbox" aria-label="Toggle teacher mode"><span class="slider"></span></div>
+      <label for="mode-checkbox">Teacher</label>
+    </div>
+    <div class="progress-bar-mini" title="Lesson progress"><div class="fill" style="width:0%"></div></div>
+    <span class="progress-text" style="font-size:0.8rem;font-weight:600;color:#64748b;">0/6</span>
+  </div>
+</header>
+
+<main class="main-content" id="main">
+
+  <div class="lesson-banner">
+    <h1>Lesson 4: Three-Class Model</h1>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 45–60 minutes</span>
+      <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Windows PC, Browser, Paint</span>
+    </div>
+    <h3 style="color:#fff;margin-top:0.5rem;">Today you will&hellip;</h3>
+    <ul class="outcomes">
+      <li>Build a 3-class model (circle, triangle, and square)</li>
+      <li>Identify which classes the model confuses and understand why</li>
+      <li>Improve the model by adding more or better training data</li>
+    </ul>
+  </div>
+
+  <div class="box box-blue">
+    <h4>Equipment Needed</h4>
+    <ul>
+      <li>Windows PC with Chrome or Edge browser</li>
+      <li>Microsoft Paint</li>
+      <li>A folder on the desktop called <strong>TM_Lesson4</strong></li>
+    </ul>
+  </div>
+
+  <h2>Key Vocabulary</h2>
+  <div class="vocab-list">
+    <div class="vocab-item"><strong>Multi-class</strong><span>A model with more than two classes — it has to choose between 3 or more categories.</span></div>
+    <div class="vocab-item"><strong>Confusion</strong><span>When the model mixes up two classes — e.g. predicts "square" when it's actually a "triangle".</span></div>
+    <div class="vocab-item"><strong>Improvement</strong><span>Making a model better by adding more data, better data, or fixing problems.</span></div>
+  </div>
+
+  <div class="box box-yellow">
+    <h4>Starter Activity (5 minutes)</h4>
+    <p><strong>Quick quiz:</strong> You have learned about circles and triangles. What other shapes could you add? Why might a third shape be harder for the model?</p>
+    <div class="form-group">
+      <label for="starter-4">Your answer:</label>
+      <textarea id="starter-4" data-save="L4_starter1" placeholder="What shape would you add, and why might it be tricky?"></textarea>
+    </div>
+    <div class="teacher-only">
+      <p><strong>Discussion:</strong> Squares might be confused with rectangles; with 3 classes, the model has more options to choose from, so confidence might be lower. Link to real-world classifiers (e.g. identifying dog breeds).</p>
+    </div>
+  </div>
+
+  <h2>Main Tasks</h2>
+
+  <h3>Part A: Create Your Three-Class Dataset</h3>
+  <ol class="steps">
+    <li>
+      <strong>Create a folder</strong> <code>TM_Lesson4</code>. Inside, create:
+      <ul style="margin-top:0.4rem;">
+        <li><code>TRAIN/Circles/</code> — 10 circle images (white background)</li>
+        <li><code>TRAIN/Triangles/</code> — 10 triangle images (white background)</li>
+        <li><code>TRAIN/Squares/</code> — 10 square images (white background)</li>
+        <li><code>TEST/Circles/</code> — 5 new circle images</li>
+        <li><code>TEST/Triangles/</code> — 5 new triangle images</li>
+        <li><code>TEST/Squares/</code> — 5 new square images</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Draw your squares</strong> in Paint. Make them different sizes but keep the white background. Remember: vary them!
+    </li>
+    <li>
+      You can reuse your Lesson 3 circles and triangles if they were on white backgrounds.
+    </li>
+  </ol>
+
+  <h3>Part B: Build the 3-Class Model</h3>
+  <ol class="steps">
+    <li>
+      <strong>Open Teachable Machine</strong> and start a new Image Project.
+    </li>
+    <li>
+      You'll see Class 1 and Class 2 by default. Click <strong>"Add a class"</strong> to add a third class.
+    </li>
+    <li>
+      Rename the classes to <strong>Circle</strong>, <strong>Triangle</strong>, and <strong>Square</strong>.
+    </li>
+    <li>
+      Upload your <strong>TRAIN images</strong> into the correct classes.
+    </li>
+    <li>
+      <strong>Train the model</strong>. Then test with your <strong>TEST images</strong>.
+    </li>
+  </ol>
+
+  <h3>Part C: Record Your Results</h3>
+  <p>Test with 15 test images (5 per class) and record the results:</p>
+
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Actual Shape</th>
+        <th>Model's Prediction</th>
+        <th>Confidence</th>
+        <th>Correct?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><input type="text" data-save="L4_actual1"></td><td><input type="text" data-save="L4_pred1"></td><td><input type="text" data-save="L4_conf1"></td><td><input type="text" data-save="L4_correct1"></td></tr>
+      <tr><td>2</td><td><input type="text" data-save="L4_actual2"></td><td><input type="text" data-save="L4_pred2"></td><td><input type="text" data-save="L4_conf2"></td><td><input type="text" data-save="L4_correct2"></td></tr>
+      <tr><td>3</td><td><input type="text" data-save="L4_actual3"></td><td><input type="text" data-save="L4_pred3"></td><td><input type="text" data-save="L4_conf3"></td><td><input type="text" data-save="L4_correct3"></td></tr>
+      <tr><td>4</td><td><input type="text" data-save="L4_actual4"></td><td><input type="text" data-save="L4_pred4"></td><td><input type="text" data-save="L4_conf4"></td><td><input type="text" data-save="L4_correct4"></td></tr>
+      <tr><td>5</td><td><input type="text" data-save="L4_actual5"></td><td><input type="text" data-save="L4_pred5"></td><td><input type="text" data-save="L4_conf5"></td><td><input type="text" data-save="L4_correct5"></td></tr>
+      <tr><td>6</td><td><input type="text" data-save="L4_actual6"></td><td><input type="text" data-save="L4_pred6"></td><td><input type="text" data-save="L4_conf6"></td><td><input type="text" data-save="L4_correct6"></td></tr>
+      <tr><td>7</td><td><input type="text" data-save="L4_actual7"></td><td><input type="text" data-save="L4_pred7"></td><td><input type="text" data-save="L4_conf7"></td><td><input type="text" data-save="L4_correct7"></td></tr>
+      <tr><td>8</td><td><input type="text" data-save="L4_actual8"></td><td><input type="text" data-save="L4_pred8"></td><td><input type="text" data-save="L4_conf8"></td><td><input type="text" data-save="L4_correct8"></td></tr>
+      <tr><td>9</td><td><input type="text" data-save="L4_actual9"></td><td><input type="text" data-save="L4_pred9"></td><td><input type="text" data-save="L4_conf9"></td><td><input type="text" data-save="L4_correct9"></td></tr>
+      <tr><td>10</td><td><input type="text" data-save="L4_actual10"></td><td><input type="text" data-save="L4_pred10"></td><td><input type="text" data-save="L4_conf10"></td><td><input type="text" data-save="L4_correct10"></td></tr>
+      <tr><td>11</td><td><input type="text" data-save="L4_actual11"></td><td><input type="text" data-save="L4_pred11"></td><td><input type="text" data-save="L4_conf11"></td><td><input type="text" data-save="L4_correct11"></td></tr>
+      <tr><td>12</td><td><input type="text" data-save="L4_actual12"></td><td><input type="text" data-save="L4_pred12"></td><td><input type="text" data-save="L4_conf12"></td><td><input type="text" data-save="L4_correct12"></td></tr>
+      <tr><td>13</td><td><input type="text" data-save="L4_actual13"></td><td><input type="text" data-save="L4_pred13"></td><td><input type="text" data-save="L4_conf13"></td><td><input type="text" data-save="L4_correct13"></td></tr>
+      <tr><td>14</td><td><input type="text" data-save="L4_actual14"></td><td><input type="text" data-save="L4_pred14"></td><td><input type="text" data-save="L4_conf14"></td><td><input type="text" data-save="L4_correct14"></td></tr>
+      <tr><td>15</td><td><input type="text" data-save="L4_actual15"></td><td><input type="text" data-save="L4_pred15"></td><td><input type="text" data-save="L4_conf15"></td><td><input type="text" data-save="L4_correct15"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Accuracy &amp; Confusion Analysis</h3>
+    <div class="form-group">
+      <label for="acc4">Your accuracy (correct ÷ 15 × 100):</label>
+      <input type="text" id="acc4" data-save="L4_accuracy" placeholder="e.g. 73%">
+    </div>
+    <div class="form-group">
+      <label for="confused4">Which two shapes did the model confuse most often?</label>
+      <input type="text" id="confused4" data-save="L4_confused" placeholder="e.g. Square and Triangle">
+    </div>
+    <div class="form-group">
+      <label for="why4">Why do you think it got confused?</label>
+      <textarea id="why4" data-save="L4_whyConfused" placeholder="Think about what the shapes have in common..."></textarea>
+    </div>
+  </div>
+
+  <h3>Part D: Improve Your Model</h3>
+  <ol class="steps">
+    <li>
+      Look at which class the model struggled with most. <strong>Draw 5 more training images</strong> for that class, making them as clear and varied as possible.
+    </li>
+    <li>
+      Add the new images to the same Teachable Machine project and <strong>re-train</strong>.
+    </li>
+    <li>
+      Test again with your test images. Did the accuracy improve?
+    </li>
+  </ol>
+  <div class="form-group">
+    <label for="improved4">New accuracy after improvement:</label>
+    <input type="text" id="improved4" data-save="L4_improvedAccuracy" placeholder="e.g. 87%">
+  </div>
+
+  <div class="box box-red">
+    <h4>Common Mistakes &amp; Quick Fixes</h4>
+    <ul>
+      <li><strong>Squares look like rectangles:</strong> Make sure your squares are roughly equal on all sides. Very stretched shapes will confuse the model.</li>
+      <li><strong>Model always picks one class:</strong> Check that you have roughly equal numbers of images in each class (balanced dataset).</li>
+      <li><strong>Can't add a third class:</strong> Click the "+ Add a class" button below the existing classes in Teachable Machine.</li>
+    </ul>
+  </div>
+
+  <div class="box box-purple">
+    <h4>Challenge / Stretch Task</h4>
+    <p>Add a 4th class — perhaps a <strong>star</strong> or a <strong>pentagon</strong>. How does accuracy change with even more classes?</p>
+    <div class="form-group">
+      <label for="challenge-4">What happened?</label>
+      <textarea id="challenge-4" data-save="L4_challenge" placeholder="Describe your 4th class and results..."></textarea>
+    </div>
+  </div>
+
+  <div class="exit-ticket">
+    <h3>Exit Ticket</h3>
+    <div class="form-group">
+      <label for="exit4-1">1. What does "confusion" mean when talking about a model?</label>
+      <input type="text" id="exit4-1" data-save="L4_exit1" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit4-2">2. Name one way to improve a model that isn't accurate enough.</label>
+      <input type="text" id="exit4-2" data-save="L4_exit2" placeholder="Your answer...">
+    </div>
+    <div class="form-group">
+      <label for="exit4-3">3. Why is a 3-class model harder than a 2-class model?</label>
+      <input type="text" id="exit4-3" data-save="L4_exit3" placeholder="Your answer...">
+    </div>
+    <div class="teacher-only">
+      <p><strong>Expected answers:</strong></p>
+      <ol>
+        <li>Confusion is when the model predicts the wrong class — e.g. calling a square a triangle.</li>
+        <li>Add more training data, add more variety, or make the images clearer.</li>
+        <li>Because the model has more choices to pick from, so there's more chance of getting confused, especially if classes look similar.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:2rem;">
+    <button class="btn btn-done" data-lesson="4">☐ Mark Lesson as Done</button>
+    <button class="btn btn-danger btn-small btn-reset-lesson" data-lesson="4">Reset This Lesson</button>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="lesson-3.html" class="btn btn-outline">&larr; Lesson 3</a>
+    <a href="lesson-5.html" class="btn btn-primary">Lesson 5 &rarr;</a>
+  </div>
+
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>
