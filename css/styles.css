@@ -361,6 +361,16 @@ img { max-width: 100%; height: auto; }
   font-size: 0.75rem;
   color: rgba(255,255,255,0.5);
   text-align: center;
+  line-height: 1.5;
+}
+.sidebar-footer a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+.sidebar-footer a:hover {
+  color: #fff;
 }
 
 /* Overlay for mobile */
